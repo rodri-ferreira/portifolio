@@ -509,7 +509,7 @@ footer{
 @media (max-width: 768px){
     .section-div{
         flex-direction: column;
-        padding-top: 300px;
+        padding-top: 420px;
         text-align: center;
         height: calc(100vh - 61px);
     }
