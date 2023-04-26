@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400&display=swap');
 
-/*font-family: 'Roboto', sans-serif;
-font-family: 'Source Code Pro', monospace;*/
-
 *{
     margin: 0px;
     padding: 0px;
@@ -10,6 +7,7 @@ font-family: 'Source Code Pro', monospace;*/
     font-family: 'Source Code Pro', monospace;
     list-style: none;
     text-decoration: none;
+    color: #fff;
 }
 
 .clear{
@@ -23,6 +21,8 @@ body{
 .active{
     display: block;
 }
+
+/* inicio animações */
 
 @keyframes inicializar {
     from {
@@ -46,16 +46,13 @@ body{
     }
 }
 
-.digitando::after{
-    content: '|';
-    margin-left: 5px;
-    opacity: 1;
-    animation: pisca .5s infinite;
-}
+/* fim animações */
+
 
 /* header */
 
 header{
+    max-width: 1400px;
     width: 100%;
     background-color: #000;
     padding: 10px;
@@ -75,30 +72,31 @@ header span{
     color: #fff;
 }
 
-header .navegacao-primaria{
+.navegacao-primaria{
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-header .navegacao-primaria li a{
+.navegacao-primaria li a{
     padding: 10px;
     color: #fff;
     font-size: 1rem;
 }
 
-header .navegacao-primaria li a:hover{
+.navegacao-primaria li a:hover{
     background-color: #fff;
     color: #000;
 }
 
-header #btn-menu{
+#btn-menu{
     display: none;
 }
 
 /* dowload cv secao */
 
 .section-div{   
+    max-width: 1400px;
     animation: inicializar .7s forwards;
     display: flex;
     gap: 100px;
@@ -107,23 +105,19 @@ header #btn-menu{
 }
 
 .section-div div{
-    margin-top: 190px;
-    margin-left: 100px;
+    margin: 190px 0 0 100px ;
 }
 
 .section-div div h2{
     font-weight: 600;
-    color: #f7f7f7;
     margin-bottom: 10px;
 }
 
 .section-div div p{
-    color: #fff;
     margin-bottom: 80px;
 }
 
 .section-div div a{
-    color: #fff;
     padding: 15px 40px;
     border-radius: 5px;
     border: 2px solid #fff;
@@ -135,6 +129,13 @@ header #btn-menu{
     background-color: #fff;
 }
 
+.digitando::after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .5s infinite;
+}
+
 .section-div img{
     width: 450px;
     height: 450px;
@@ -144,19 +145,15 @@ header #btn-menu{
 /* seção principal sobre mim */
 
 main{
+    max-width: 1400px;
     background-color: #000;
-    color: #fff;
-}
-
-main .sobre{
-    padding-top: 30px;
 }
 
 .sobre{
     margin: 0 auto;
     width: 85%;
     background: #111;
-    padding-bottom: 30px;
+    padding: 30px 0 30px 0;
 }
 
 .sobre-titulo{
@@ -308,14 +305,13 @@ main img{
     width: 85%;
     padding-bottom: 30px;
     margin: 0 auto;
-    background: #161616;;
+    background: #161616;
 }
 .div-contatos{
     width: 100%;
     display: flex;
     justify-content: space-between; 
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px 0;
 }
 
 .redes{
@@ -330,7 +326,6 @@ main img{
     font-size: 36px;
     padding: 10px;
     color: #dc3545;
-
 }
 
 .redes h3{
@@ -404,6 +399,7 @@ main img{
 
 input[type="submit"]{
     background: #fff;
+    color: #000;
     border-radius: 5px;
     border: #fff;
     padding: 10px 30px;
@@ -418,9 +414,6 @@ input[type="submit"]:hover{
     outline: 1px solid #fff;
 }
 
-
-
-
 /* rodapé */
 
 footer{
@@ -430,22 +423,22 @@ footer{
 
 /* media queries */
 
+/* media queries 999px*/
 @media (max-width: 999px){
-    header .navegacao-primaria{
+    .navegacao-primaria{
         position: absolute;
         top: 50px;
         left: 0;
         width: 100%;
-        height: 0px;
         text-align: center;
-        transition: 1s;
+        transition: 0.5s;
     }
 
-    header .navegacao-primaria li{
+    .navegacao-primaria li{
         padding: 5px;
     }
 
-    header #btn-menu{
+    #btn-menu{
         display: block;
         cursor: pointer;
         height: 30px;
@@ -453,14 +446,14 @@ footer{
         border: none; 
     }
 
-    header #btn-menu span{
+    #btn-menu span{
         display: block;
         width: 25px;
         height: 2px;
         background: #fff;
     }
 
-    header #btn-menu span::after{
+    #btn-menu span::after{
         content: '';
         display:block;
         width: 25px;
@@ -470,7 +463,7 @@ footer{
         background: #fff;
     } 
 
-    header #btn-menu span::before{
+    #btn-menu span::before{
         content: '';
         display: block;
         width: 25px;
@@ -489,8 +482,7 @@ footer{
     }
 
     .section-div div{
-        margin-top: 50px;
-        margin-left: 50px;
+        margin: 130px 0 0 50px;
     }
 
     .section-div img{
@@ -506,6 +498,7 @@ footer{
 
 }
 
+/* media queries 768px*/
 @media (max-width: 768px){
     .section-div{
         flex-direction: column;
@@ -538,7 +531,6 @@ footer{
         width: 100%;
         margin: 0px;
         padding: 0 30px;
-        
     }
 
     main #foto-rodrigo{
@@ -582,11 +574,9 @@ footer{
     .contato{
         width: 100%;
     }
-
-    
-
 }
 
+/* media queries 600px*/
 @media (max-width: 600px){
     .div-contatos{
         display: block;
@@ -604,6 +594,7 @@ footer{
     }
 }
 
+/* media queries 450px*/
 @media (max-width: 450px){
     header span{
         display: none;
@@ -621,5 +612,4 @@ footer{
         margin: 30 20px 20px 20px;
         grid-template-columns: 100%;
     }
- 
 }
