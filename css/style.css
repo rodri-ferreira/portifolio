@@ -8,6 +8,7 @@
     list-style: none;
     text-decoration: none;
     color: #fff;
+    margin: 0 auto;
 }
 
 .clear{
@@ -61,6 +62,8 @@ header{
     justify-content: space-around;
     z-index: 10;
     position: fixed;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 header h1>a{
@@ -101,11 +104,11 @@ header span{
     display: flex;
     gap: 100px;
     justify-content: space-around;
-    background-color: #000;
+    background-color: #000;    
 }
 
 .section-div div{
-    margin: 190px 0 0 100px ;
+    margin: 190px 0 0 110px ;
 }
 
 .section-div div h2{
@@ -122,6 +125,7 @@ header span{
     border-radius: 5px;
     border: 2px solid #fff;
     transition: .5s;
+    
 }
 
 .section-div div a:hover{
@@ -139,7 +143,7 @@ header span{
 .section-div img{
     width: 450px;
     height: 450px;
-    margin: 80px 100px 50px 0;
+    margin: 80px 110px 50px 0;
 }
 
 /* seção principal sobre mim */
@@ -147,6 +151,7 @@ header span{
 main{
     max-width: 1400px;
     background-color: #000;
+    
 }
 
 .sobre{
@@ -296,7 +301,7 @@ main img{
 }
 
 .cards-portifolio img:hover{
-    padding: 0;
+    transform: scale(1.1);
 }
 
 /* Contato */
